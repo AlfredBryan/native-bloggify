@@ -27,8 +27,8 @@ class Slides extends Component {
           style={[styles.slideStyle, { backgroundColor: slide.color }]}
           key={slide.text}
         >
+          <Image source={{ uri: slide.photo }} style={styles.imageStyle} />
           <Text style={styles.textStyle}>{slide.text}</Text>
-          <Image source={{ uri: slide.photo }} />
           {this.renderLastSlide(index)}
         </View>
       );
@@ -46,13 +46,15 @@ class Slides extends Component {
 
 const styles = {
   textStyle: {
-    fontSize: 30,
+    fontSize: 20,
     textAlign: "center",
     color: "white",
     marginBottom: 20
   },
   slideStyle: {
-    marginTop: 20,
+    flex: 1,
+    justifyContent: "center",
+    alignContent: "center",
     width: SCREEN_WIDTH
   },
   buttonStyle: {
@@ -61,6 +63,11 @@ const styles = {
   alignButton: {
     width: 150,
     marginLeft: 110
+  },
+  imageStyle: {
+    width: 350,
+    height: 200,
+    marginLeft: 5
   }
 };
 

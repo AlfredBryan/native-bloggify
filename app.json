@@ -4,6 +4,9 @@
     "slug": "native-bloggify",
     "privacy": "public",
     "sdkVersion": "35.0.0",
+    "android": {
+      "package": "com.bryano.xxx"
+    },
     "platforms": [
       "ios",
       "android",
@@ -11,7 +14,7 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/bloggy.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",

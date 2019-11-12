@@ -8,16 +8,23 @@ import HomeScreen from "./screens/HomeScreen";
 import BlogScreen from "./screens/BlogScreen";
 import PostScreen from "./screens/PostScreen";
 
-const MainNavigator = createBottomTabNavigator({
-  welcome: { screen: WelcomeScreen },
-  home: { screen: HomeScreen },
-  main: {
-    screen: createBottomTabNavigator({
-      blog: { screen: BlogScreen },
-      post: { screen: PostScreen }
-    })
+const MainNavigator = createBottomTabNavigator(
+  {
+    welcome: { screen: WelcomeScreen },
+    home: { screen: HomeScreen },
+    main: {
+      screen: createBottomTabNavigator({
+        blog: { screen: BlogScreen },
+        post: { screen: PostScreen }
+      })
+    }
+  },
+  {
+    defaultNavigationOptions: {
+      tabBarVisible: false
+    }
   }
-});
+);
 
 const AppContainer = createAppContainer(MainNavigator);
 
